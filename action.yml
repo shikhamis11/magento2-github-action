@@ -4,8 +4,6 @@ description: 'Github Action for magento 2'
 inputs:
   error-severity:  # id of input
     description: 'Error severity'
-    required: true
-    default: 10
     
 outputs:
   time: # id of output
