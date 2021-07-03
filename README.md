@@ -4,9 +4,10 @@ This action checks coding standard of magento 2 extensions.
 
 ## Inputs
 
-## `error-severity`
+ `errorSeverity`
+ 
+ `warningSeverity`
 
-The severity of error to check. Default `"10"`.
 
 ## Outputs
 
@@ -16,6 +17,10 @@ The test result
 
 ## Example usage
 
-uses: actions/magento2-docker-action@v1
-with:
-  error-severity: '10'
+`uses: shikhamis11/magento2-docker-action@master`
+
+  `with:`
+  
+    errorSeverity: "5"
+    
+    warningSeverity: "5"
