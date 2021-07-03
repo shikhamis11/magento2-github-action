@@ -11,5 +11,4 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - 4
+  args: ${{ inputs.error-severity }}
