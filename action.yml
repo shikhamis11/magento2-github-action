@@ -5,8 +5,11 @@ inputs:
   errorSeverity:  # id of input
     description: 'Error severity'
     required: false
-    default: '1'
-    
+    default: '10'
+  warningSeverity:
+    description: 'Warning severity'
+    required: false
+    default: '8'    
 outputs:
   time: # id of output
     description: 'The test result'
@@ -15,3 +18,4 @@ runs:
   image: 'Dockerfile'
   args: 
     - ${{ inputs.errorSeverity }}
+    - ${{ inputs.warningSeverity }}
