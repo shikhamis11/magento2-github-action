@@ -2,7 +2,31 @@
 
 This action checks coding standard of magento 2 extensions.
 
-<img width="656" alt="Screenshot 2021-07-04 at 8 48 01 PM" src="https://user-images.githubusercontent.com/25526037/124390462-6393b200-dd09-11eb-8e3e-3a3555759617.png">
+#### How to use it
+In your GitHub repository add below flow at path
+`.github/workflows/php.yml`
+
+```
+name: M2 Coding Standard
+on: [push, pull_request]
+
+jobs:
+  static:
+    name: Magento 2 Coding Standard
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Magento Coding Standard Test
+        id: magento
+        uses: shikhamis11/magento2-docker-action@master
+        with:
+          errorSeverity: "10"
+          warningSeverity: "10"
+
+      # Use the output from the `magento` step
+      - name: Get the output time
+        run: echo "Action Output, ${{ steps.magento.outputs.time }}"
+```
 
 ## Inputs
 
