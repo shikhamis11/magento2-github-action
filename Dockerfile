@@ -1,5 +1,5 @@
 # Container image that runs your code
-FROM php:7.3-cli-alpine3.9
+FROM php:7.4.12-cli-alpine3.11
 
 COPY --from=composer:1 /usr/bin/composer /usr/local/bin/composer
 
